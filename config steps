@@ -1,0 +1,45 @@
+sudo -s
+
+apt-get update
+apt-get upgrade
+
+apt-get -y install mysql-server mysql-client
+
+mysql_secure_installation
+
+apt-get -y install nginx
+
+service nginx start
+
+apt-get -y install php7.0-fpm
+
+vi  /etc/nginx/sites-available/default
+
+       location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+        #
+        #       # With php7.0-cgi alone:
+                #fastcgi_pass 127.0.0.1:9000;
+        #       # With php7.0-fpm:
+                fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        }
+
+service nginx reload
+
+#vi /etc/php/7.0/fpm/php.ini
+
+vi /var/www/html/info.php
+<?php
+phpinfo();
+?>
+
+apt-get -y install php7.0-mysql php7.0-curl php7.0-gd php7.0-intl php-pear php-imagick php7.0-imap php7.0-mcrypt php-memcache  php7.0-pspell php7.0-recode php7.0-sqlite3 php7.0-tidy php7.0-xmlrpc php7.0-xsl php7.0-mbstring php-gettext
+service php7.0-fpm reload
+
+service php7.0-fpm reload
+
+
+
+
+
+
