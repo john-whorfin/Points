@@ -1,6 +1,7 @@
+<?php 
+
 //dbconnect.php
 
-<?php 
 
 $dbuser = "what";
 $dbpass = "pass";
