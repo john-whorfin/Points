@@ -1,7 +1,3 @@
-
-
-
-
 <html>
 
 <link rel="stylesheet" type="text/css" href="/css/codeapp.css" media="screen" />
@@ -22,15 +18,19 @@ include 'dbconnect.php';
 
 // mysqli
 
-$stmt = $mysqli->prepare('SELECT * FROM tasks');
-$stmt->bind_param('si', $name, $points);
+$query = "SELECT name FROM tasks";
+if ($result = $mysqli->query($query)) {
 
-$stmt->execute();
+    /* fetch associative array */
+    while ($row = $result->fetch_assoc()) {
+     printf ("%s\n", $row["name"]);
+    }
 
-$result = $stmt->get_result();
+    /* free result set */
+    $result->free();
+} else {
 
-while ($row = $result->fetch_assoc()) {
-    echo $row;
+echo "fuck";
 }
 
 
