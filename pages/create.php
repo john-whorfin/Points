@@ -2,7 +2,7 @@
 
 <html>
 
-<link rel="stylesheet" type="text/css" href="./codeapp.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/css/codeapp.css" media="screen" />
 <div>
   <h2>Create item</h2>
   <div class="input-list style-1 clearfix">
