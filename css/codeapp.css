@@ -1,0 +1,21 @@
+input[type="text"] {
+  margin: 0;
+  font-family: sans-serif;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  font-family: sans-serif;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  vertical-align:middle; 
+}
+
+
+
+
+.narrowbox {width: 30px;}
