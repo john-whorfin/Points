@@ -1,11 +1,9 @@
-
-
 <?php
 
-$name = mysqli_real_escape_string($link, $_POST['name']);
-$points = mysqli_real_escape_string($link, $_POST['points']);
-
 include 'dbconnect.php';
+
+$name = mysqli_real_escape_string($mysqli, $_POST['name']);
+$points = mysqli_real_escape_string($mysqli, $_POST['points']);
 
 // mysqli
 
