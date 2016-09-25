@@ -1,13 +1,4 @@
-<?php
 
-include 'dbconnect.php';
-
-// mysqli
-
-$result = $mysqli->query("SELECT * FROM tasks");
-$row = $result->fetch_assoc();
-echo htmlentities($row['_message']);
-?>
 
 
 
@@ -25,8 +16,15 @@ echo htmlentities($row['_message']);
        <input class="submit" type="submit" placeholder="submit">
   </div>
 
-<?php 
-	echo "thing";
+<?php
+
+include 'dbconnect.php';
+
+// mysqli
+
+$result = $mysqli->query("SELECT * FROM tasks");
+$row = $result->fetch_assoc();
+echo htmlentities($row['_message']);
 ?>
 
 
