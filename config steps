@@ -43,3 +43,23 @@ service php7.0-fpm reload
 
 
 
+
+
+
+mysql
+_____
+
+
+CREATE USER 'foo'@'localhost' IDENTIFIED BY 'password';
+
+DROP DATABASE IF EXISTS points;
+
+CREATE DATABASE points;
+
+GRANT ALTER, CREATE TEMPORARY TABLES, DELETE, INSERT, LOCK TABLES, SELECT, UPDATE ON dbname.* TO foo@localhost;
+
+FLUSH PRIVILEGES;
+
+USE points;
+
+CREATE TABLE tasks (name VARCHAR(30), points INT);
