@@ -23,7 +23,7 @@ if ($result = $mysqli->query($query)) {
 
     /* fetch associative array */
     while ($row = $result->fetch_assoc()) {
-     printf ("%s %s\n", $row["name"], $row["points"]);
+     printf ("%s %s<br>", $row["name"], $row["points"]);
     }
 
     /* free result set */
