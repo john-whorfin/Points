@@ -28,6 +28,7 @@ if ($result = $mysqli->query($query)) {
 echo "fuck";
 }
 
+// foo
 
 
 
