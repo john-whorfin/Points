@@ -7,7 +7,10 @@
 
   </div>
 
+
 <?php
+
+echo "<table>";
 
 include 'dbconnect.php';
 
@@ -18,7 +21,9 @@ if ($result = $mysqli->query($query)) {
 
     /* fetch associative array */
     while ($row = $result->fetch_assoc()) {
+   	echo "<tr>";
      printf ("%s %s<br>", $row["name"], $row["points"]);
+       	echo "</tr>";
     }
 
     /* free result set */
@@ -28,9 +33,7 @@ if ($result = $mysqli->query($query)) {
 echo "fuck";
 }
 
-
-
-//  asdasd
+echo "</table>";
 
 ?>
 
