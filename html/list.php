@@ -3,14 +3,11 @@
 <link rel="stylesheet" type="text/css" href="/css/codeapp.css" media="screen" />
 <div>
   <h2>List items</h2>
-  <div class="input-list style-1 clearfix">
-
-  </div>
-
+</div>
+<table>
 
 <?php
 
-echo "<table>";
 
 include 'dbconnect.php';
 
@@ -21,9 +18,9 @@ if ($result = $mysqli->query($query)) {
 
     /* fetch associative array */
     while ($row = $result->fetch_assoc()) {
-   	echo "<tr>";
-     printf ("%s %s<br>", $row["name"], $row["points"]);
-       	echo "</tr>";
+     	echo "<tr>";
+      printf ("%s %s<br>", $row["name"], $row["points"]);
+      echo "</tr>";
     }
 
     /* free result set */
@@ -33,13 +30,11 @@ if ($result = $mysqli->query($query)) {
 echo "fuck";
 }
 
-echo "</table>";
+
 
 ?>
 
-
-</div>
-
+</table>
 
 
 </html>
